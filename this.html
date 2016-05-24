@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>运用this做的小实例</title>
+	<meta charset="utf-8" />
+	<style type="text/css">
+	li {
+		width: 200px;
+		height: 200px;
+		background: #f1f1f1;
+		margin: 10px;
+		position: relative;
+		float: left;
+	}
+	div {
+		width: 80px;
+		height: 200px;
+		background: yellow;
+		position: absolute;
+		top: 100px;
+		left: 20px;
+		display: none;
+	}
+	</style>
+	<script type="text/javascript">
+	window.onload = function() {
+		var aLi = document.getElementsByTagName('li');
+		for (var i=0; i<aLi.length; i++) {    /* 获取数组长度的时候，父级元素不用带下标 */
+			aLi[i].onmouseover = function() {
+				this.getElementsByTagName('div')[0].style.display = 'block';
+			};
+			aLi[i].onmouseout = function() {
+				this.getElementsByTagName('div')[0].style.display = 'none';
+			};
+		};
+	};
+	</script>
+</head>
+<body>
+<ul>
+	<li>
+		<div></div>
+	</li>
+	<li>
+		<div></div>
+	</li>
+	<li>
+		<div></div>
+	</li>
+</ul>
+</body>
+</html>
