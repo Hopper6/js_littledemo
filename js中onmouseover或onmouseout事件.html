@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js入门热身</title>
+	<meta charset="utf-8"/>
+	<style>
+	li {
+		list-style: none;
+	}
+	ul ul {
+		padding: 0;
+		margin: 0;
+		width: 140px;
+		border: 1px solid #000;
+		position: absolute;
+		top: 30px;
+		left: -1px;
+		background: #ff8400
+	}
+	.lis {
+		width: 80px;
+		height: 30px;
+		border: 1px solid #333;
+		position: relative;
+	}
+	.lis a {
+		display: block;
+		text-align: center;
+		line-height: 30px;
+		text-decoration: none;
+		color: #000;
+		background: #f1f1f1;
+	}
+	ul ul li {
+		text-align: center;
+		line-height: 30px;
+
+	}
+	</style>
+</head>
+<body>
+<ul>
+	<li id="lis" class="lis">
+		<a id="link" href="#">微博</a>
+		<ul id="ul1" style="display:none;">
+			<li>私信</li>
+			<li>评论</li>
+			<li>@我</li>
+		</ul>
+	</li>
+</ul>
+<script>
+	var li = document.getElementById("lis");
+	var ul = document.getElementById("ul1");
+	var link = document.getElementById("link")
+	li.onmouseover = function () {
+		ul.style.display = "block";
+		link.style.background = "yellow";
+	};
+	li.onmouseout = function () {
+		ul.style.display = "none";
+		link.style.background = "#f1f1f1";
+	};
+</script>
+
+</body>
+</html>
