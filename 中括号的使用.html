@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>中括号的使用</title>
+	<meta charset="utf-8" />
+	<style>
+	#div1 {
+		width: 200px;
+		height: 200px;
+		border: 1px solid black;
+	}
+	</style>
+	<script>
+	window.onload = function () {
+		var oText1 = document.getElementById('text1');
+		var oText2 = document.getElementById('text2');
+		var oBtn = document.getElementById('btn');
+		var oDiv = document.getElementById('div1');
+		oBtn.onclick = function () {
+			oDiv.style[oText1.value] = oText2.value;
+		};
+	};
+	</script>
+</head>
+<body>
+请输入属性名称：<input type="text" value="" id="text1" /><br/><br/>
+请输入属性值：<input type="text" value="" id="text2" />
+<input type="button" value="确定" id="btn" />
+<div id="div1"></div>
+</body>
+</html>
