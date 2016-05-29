@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>for套for</title>
+	<meta charset="utf-8" />
+	<script type="text/javascript">
+	window.onload = function() {
+		var oUl = document.getElementById('list');
+		var aLi = oUl.getElementsByTagName('li');
+		var aLi1 = null;
+		var len1 = aLi.length;
+		for ( var i=0; i<len1; i++) {
+			aLi1 = aLi[i].getElementsByTagName('li');
+			
+		var len2 = aLi1.length;
+			for ( var j=0; j<len2; j++) {
+				aLi1[j].style.border = "1px solid green";
+			};
+		};
+	};
+	</script>
+</head>
+<body>
+<ul id="list">
+	<li>
+		<h2>我的好友1</h2>
+		<ul>
+			<li>aa</li>
+			<li>bb</li>
+			<li>cc</li>
+		</ul>
+	</li>
+	<li>
+		<h2>我的好友2</h2>
+		<ul>
+			<li>dd</li>
+			<li>ee</li>
+			<li>ff</li>
+		</ul>
+	</li>
+	<li>
+		<h2>黑名单</h2>
+		<ul>
+			<li>11</li>
+			<li>22</li>
+			<li>33</li>
+		</ul>
+	</li>
+</ul>
+</body>
+</html>
