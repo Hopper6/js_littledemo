@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>自动生成5条新闻</title>
+	<meta charset="utf-8" />
+	<script type="text/javascript">
+	window.onload = function() {
+		var arr = [
+			'这所“低调”高校获5位领导人题词 到底什么来头',
+			'美报告声称美军航行自由范围涵盖中国空识区',
+			'日本军工出口遇重挫丢400亿美元大单 日媒称全怪中国',
+			'中国将逐步提高医务人员收入待遇 禁设创收指标',
+ 			'天津12万余名党员干部共补交党费2.77亿元'
+		];
+		var oBtn = document.getElementById('btn');
+		var oUl = document.getElementById('list');
+		var onOff = true;
+		oBtn.onclick = function() {
+			if (onOff) {
+				for ( var i=0; i<arr.length; i++) {
+					oUl.innerHTML += '<li>' + arr[i] + '</li>'
+				};
+				onOff = false;
+			};
+		};
+	};
+	</script>
+</head>
+<body>
+<input type="button" value="自动生成新闻" id="btn" />
+<ul id="list"></ul>
+</body>
+</html>
