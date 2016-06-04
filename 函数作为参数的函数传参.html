@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>函数作为参数的函数传参</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+<script type="text/javascript">
+	fn1( function() { alert(1); } );
+	function fn1(fn) {
+		fn();
+	};
+</script>
+</body>
+</html>
