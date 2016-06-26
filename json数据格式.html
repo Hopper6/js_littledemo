@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>json数据格式</title>
+	<meta charset="utf-8" />
+	<script type="text/javascript">
+	window.onload = function (){
+		var json = {
+			'arrUrl':['1.jpg','2.jpg','3.jpg'],
+			'arrText':['图一','图二','图三']
+		};
+		for (var attr in json) {
+			for(var i=0;i<json[attr].length;i++) { 
+			// 此处的attr是不需要加引号作为字符串的，它是个类似传参的变量
+				alert(json[attr][i]);
+			}
+		}
+	}
+	</script>
+</head>
+<body>
+</body>
+</html>
